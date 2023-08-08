@@ -118,11 +118,10 @@ const job = async () => {
   createMarkdown(strdate, filename);
 
   await scrape("", filename);
+  await scrape("vue", filename);
   await scrape("typescript", filename);
   await scrape("javascript", filename);
   await scrape("python", filename);
-  await scrape("Android", filename);
-  await scrape("Flutter", filename);
 
   createREADME(strdate);
   // gitAddCommitPush(strdate, filename);
