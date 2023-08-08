@@ -36,9 +36,10 @@ jobs:
         echo ${{ secrets.GITHUB_TOKEN }}
         git config --global user.name "jscoolso"
         git config --global user.email "sj510915831@163.com"
-        # git remote set-url origin https://x-access-token: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@github.com/jscoolso/github-trending.git
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/jscoolso/github-trending.git
-
+        # git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/jscoolso/github-trending.git
         git add -A
         git commit -m $(date '+%Y-%m-%d')
         git push
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN}} # GitHub 读写仓库的权限token，自动生成无需关心
+        publish_branch: master
