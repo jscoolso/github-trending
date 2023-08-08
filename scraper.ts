@@ -1,4 +1,4 @@
-import axios, { toFormData } from "axios";
+import axios from "axios";
 import cheerio from "cheerio";
 import fs from "fs";
 import path,{ dirname } from "path";
@@ -86,14 +86,14 @@ const scrape = async (language: string, filename: string) => {
   const menu = isTrending ? "trending" : language;
   let result = `\n#### ${menu}\n`;
 
-  items.each((index, element) => {
+  items.each((_index, element) => {
     const title = $(element).find(".lh-condensed a").text().replace(/\s/g, "");
     const owner = $(element).find(".lh-condensed span.text-normal").text();
     const description = $(element).find("p.col-9").text();
     let url = $(element).find(".lh-condensed a").attr("href");
     url = "https://github.com" + url;
     let stars = $(element).find(".f6 a[href$=stargazers]").text().trim();
-    result += `* [${title.trim()}](${url.trim()}):${description.trim()} ⭐${stars}\n`;
+    result += `* [${title.trim()}](${url.trim()}):${description.trim()}<${owner}> ⭐${stars}\n`;
   });
   fs.appendFileSync(path.join(folderPath, filename), result);
   todayContent += result;
