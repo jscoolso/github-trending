@@ -27,7 +27,7 @@ jobs:
 
     - name: Run Scraper
       run: |
-        npm run serve
+        npm run scraper
         # esno scripts/scraper.ts
 
     - name: push to origin master
@@ -35,7 +35,9 @@ jobs:
         echo start push
         git config --global user.name "jscoolso"
         git config --global user.email "sj510915831@163.com"
-        
+
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/jscoolso/github-trending.git
+
         git add -A
         git commit -m $(date '+%Y-%m-%d')
         git push

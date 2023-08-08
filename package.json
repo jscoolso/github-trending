@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "esno scripts/scraper.ts"
+    "scraper": "esno scraper.ts"
   },
   "keywords": [],
   "author": "",

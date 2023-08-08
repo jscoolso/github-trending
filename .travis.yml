@@ -5,5 +5,5 @@ install:
   - npm install -g pnpm
   - pnpm install
 script:
-  - npm run serve # 如果你的项目需要构建步骤
+  - npm run scraper # 如果你的项目需要构建步骤
   # - npm test # 运行你的测试
