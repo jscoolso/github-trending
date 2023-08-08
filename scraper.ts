@@ -1,8 +1,12 @@
 import axios, { toFormData } from "axios";
 import cheerio from "cheerio";
 import fs from "fs";
-import path from "path";
+import path,{ dirname } from "path";
+import { fileURLToPath } from 'url';
 import { exec } from "child_process";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const readmeSource = fs.readFileSync("README-source.md", "utf-8");
 const year = new Date().getFullYear().toString();

@@ -2,8 +2,7 @@ language: node_js
 node_js:
   - "16" # 你可以选择你需要的 Node.js 版本
 install:
-  - npm install -g pnpm
-  - pnpm install
+  - npm install
 script:
   - npm run scraper # 如果你的项目需要构建步骤
   # - npm test # 运行你的测试
