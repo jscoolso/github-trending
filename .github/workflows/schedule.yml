@@ -33,7 +33,7 @@ jobs:
     - name: push to origin master
       run: |
         echo start push
-        echo secrets.GITHUB_TOKEN
+        echo ${{ secrets.GITHUB_TOKEN }}
         git config --global user.name "jscoolso"
         git config --global user.email "sj510915831@163.com"
         # git remote set-url origin https://x-access-token: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@github.com/jscoolso/github-trending.git
