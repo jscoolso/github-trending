@@ -32,7 +32,7 @@ jobs:
 
     - name: push to origin master
       run: |
-        echo start push
+        echo 'start push'
         git config --global user.name "jscoolso"
         git config --global user.email "sj510915831@163.com""
         
