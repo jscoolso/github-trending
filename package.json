@@ -1,0 +1,23 @@
+{
+  "name": "github-trending",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "esno scripts/scraper.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.4.8",
+    "axios": "^1.4.0",
+    "cheerio": "1.0.0-rc.12",
+    "dayjs": "^1.11.9"
+  },
+  "devDependencies": {
+    "esno": "^0.17.0",
+    "typescript": "^5.1.6"
+  }
+}

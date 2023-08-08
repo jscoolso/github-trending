@@ -8,3 +8,23 @@ pip-delete-this-directory.txt
 
 *.log
 *.out
+
+node_modules
+# Editor directories and files
+.idea
+
+# Package Manager
+node_modules
+.pnpm-debug.log*
+
+# System
+.DS_Store
+.idea
+.vscode
+
+# local env files
+*.local
+cypress/screenshots/*
+cypress/videos/*
+
+coverage
