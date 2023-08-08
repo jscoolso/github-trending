@@ -12,14 +12,14 @@
 ## 2023-08-08
 
 #### trending
-* [geekan/MetaGPT](https://github.com/geekan/MetaGPT):🌟 The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo ⭐14,699
+* [geekan/MetaGPT](https://github.com/geekan/MetaGPT):🌟 The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo ⭐14,708
 * [invoke-ai/InvokeAI](https://github.com/invoke-ai/InvokeAI):InvokeAI is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The solution offers an industry leading WebUI, supports terminal use through a CLI, and serves as the foundation for multiple commercial products. ⭐17,838
 * [QwenLM/Qwen-7B](https://github.com/QwenLM/Qwen-7B):The official repo of Qwen-7B (通义千问-7B) chat & pretrained large language model proposed by Alibaba Cloud. ⭐2,568
 * [public-apis/public-apis](https://github.com/public-apis/public-apis):A collective list of free APIs ⭐251,211
 * [microsoft/azurechatgpt](https://github.com/microsoft/azurechatgpt):🤖 Azure ChatGPT: Private & secure ChatGPT for internal enterprise use 💼 ⭐2,812
 * [neovim/neovim](https://github.com/neovim/neovim):Vim-fork focused on extensibility and usability ⭐68,213
 * [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions):🚀✨ Help beginners to contribute to open source projects ⭐36,038
-* [microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners):24 Lessons, 12 Weeks, Get Started as a Web Developer ⭐73,440
+* [microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners):24 Lessons, 12 Weeks, Get Started as a Web Developer ⭐73,441
 * [kuafuai/DevOpsGPT](https://github.com/kuafuai/DevOpsGPT):Multi agent system for AI-driven software development. Convert natural language requirements into working software. Supports any development language and extends the existing base code. ⭐908
 * [vlang/v](https://github.com/vlang/v):Simple, fast, safe, compiled language for developing maintainable software. Compiles itself in <1s with zero library dependencies. Supports automatic C => V translation. https://vlang.io ⭐34,106
 * [Stability-AI/StableLM](https://github.com/Stability-AI/StableLM):StableLM: Stability AI Language Models ⭐15,219
@@ -29,21 +29,21 @@
 * [thisjam/sd-webui-oldsix-prompt](https://github.com/thisjam/sd-webui-oldsix-prompt): ⭐283
 * [tinygrad/tinygrad](https://github.com/tinygrad/tinygrad):You like pytorch? You like micrograd? You love tinygrad! ❤️ ⭐18,705
 * [Lissy93/web-check](https://github.com/Lissy93/web-check):🌐 All-in-one OSINT tool for analysing any website ⭐3,802
-* [nextui-org/nextui](https://github.com/nextui-org/nextui):🚀 Beautiful, fast and modern React UI library. ⭐13,055
+* [nextui-org/nextui](https://github.com/nextui-org/nextui):🚀 Beautiful, fast and modern React UI library. ⭐13,056
 * [gothinkster/realworld](https://github.com/gothinkster/realworld):"The mother of all demo apps" — Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more ⭐75,807
 * [burn-rs/burn](https://github.com/burn-rs/burn):Burn - A Flexible and Comprehensive Deep Learning Framework in Rust ⭐2,880
 * [DioxusLabs/dioxus](https://github.com/DioxusLabs/dioxus):Fullstack GUI library for desktop, web, mobile, and more. ⭐12,516
 * [manticoresoftware/manticoresearch](https://github.com/manticoresoftware/manticoresearch):Easy to use open source fast database for search | Good alternative to Elasticsearch now | Drop-in replacement for E in the ELK soon ⭐5,312
-* [xorbitsai/inference](https://github.com/xorbitsai/inference):Replace OpenAI GPT with another LLM in your app by changing a single line of code. Xinference gives you the freedom to use any LLM you need. With Xinference, you're empowered to run inference with any open-source language models, speech recognition models, and multimodal models, whether in the cloud, on-premises, or even on your laptop. ⭐627
+* [xorbitsai/inference](https://github.com/xorbitsai/inference):Replace OpenAI GPT with another LLM in your app by changing a single line of code. Xinference gives you the freedom to use any LLM you need. With Xinference, you're empowered to run inference with any open-source language models, speech recognition models, and multimodal models, whether in the cloud, on-premises, or even on your laptop. ⭐628
 * [getify/You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS):A book series on JavaScript. @YDKJS on twitter. ⭐170,365
 * [focus-editor/focus](https://github.com/focus-editor/focus):A simple and fast text editor ⭐783
 
 #### typescript
 * [microsoft/azurechatgpt](https://github.com/microsoft/azurechatgpt):🤖 Azure ChatGPT: Private & secure ChatGPT for internal enterprise use 💼 ⭐2,812
 * [Lissy93/web-check](https://github.com/Lissy93/web-check):🌐 All-in-one OSINT tool for analysing any website ⭐3,802
-* [nextui-org/nextui](https://github.com/nextui-org/nextui):🚀 Beautiful, fast and modern React UI library. ⭐13,055
+* [nextui-org/nextui](https://github.com/nextui-org/nextui):🚀 Beautiful, fast and modern React UI library. ⭐13,056
 * [gothinkster/realworld](https://github.com/gothinkster/realworld):"The mother of all demo apps" — Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more ⭐75,807
-* [liyupi/sql-mother](https://github.com/liyupi/sql-mother):免费的闯关式 SQL 自学教程网站，从 0 到 1 带大家掌握常用 SQL 语法，纯前端实现，简单易学~ ⭐830
+* [liyupi/sql-mother](https://github.com/liyupi/sql-mother):免费的闯关式 SQL 自学教程网站，从 0 到 1 带大家掌握常用 SQL 语法，纯前端实现，简单易学~ ⭐831
 * [vercel/nextjs-subscription-payments](https://github.com/vercel/nextjs-subscription-payments):Clone, deploy, and fully customize a SaaS subscription application with Next.js. ⭐3,784
 * [adrianhajdin/threads](https://github.com/adrianhajdin/threads):Develop Threads, Next.js 13 app that skyrocketed to 100 million sign-ups in less than 5 days, and dethroned giants like Twitter, ChatGPT, and TikTok to become the fastest-growing app ever! ⭐339
 * [lensterxyz/lenster](https://github.com/lensterxyz/lenster):Lenster is a decentralized and permissionless social media app built with Lens Protocol 🌿 ⭐20,891
@@ -52,7 +52,7 @@
 * [psychic-api/rag-stack](https://github.com/psychic-api/rag-stack):🤖 Deploy a private ChatGPT alternative hosted within your VPC. 🔮 Connect it to your organization's knowledge base and use it as a corporate oracle. Supports open-source LLMs like Llama 2, Falcon, and GPT4All. ⭐885
 * [shadcn-ui/taxonomy](https://github.com/shadcn-ui/taxonomy):An open source application built using the new router, server components and everything new in Next.js 13. ⭐14,500
 * [calcom/cal.com](https://github.com/calcom/cal.com):Scheduling infrastructure for absolutely everyone. ⭐21,764
-* [Steve245270533/gallery](https://github.com/Steve245270533/gallery):Digital exhibition project developed based on three.js. ⭐222
+* [Steve245270533/gallery](https://github.com/Steve245270533/gallery):Digital exhibition project developed based on three.js. ⭐224
 * [Nutlope/restorePhotos](https://github.com/Nutlope/restorePhotos):Restoring old and blurry face photos with AI. ⭐3,135
 * [NextJSTemplates/startup-nextjs](https://github.com/NextJSTemplates/startup-nextjs):Startup is free Next.js template for startups and SaaS businesses comes with all the essential pages, components, and sections you need to launch a complete business website. ⭐457
 * [vadimdemedes/ink](https://github.com/vadimdemedes/ink):🌈 React for interactive command-line apps ⭐24,190
@@ -66,7 +66,7 @@
 * [zzzgydi/clash-verge](https://github.com/zzzgydi/clash-verge):A Clash GUI based on tauri. Supports Windows, macOS and Linux. ⭐6,082
 
 #### javascript
-* [microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners):24 Lessons, 12 Weeks, Get Started as a Web Developer ⭐73,440
+* [microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners):24 Lessons, 12 Weeks, Get Started as a Web Developer ⭐73,441
 * [thisjam/sd-webui-oldsix-prompt](https://github.com/thisjam/sd-webui-oldsix-prompt): ⭐283
 * [Asabeneh/30-Days-Of-React](https://github.com/Asabeneh/30-Days-Of-React):30 Days of React challenge is a step by step guide to learn React in 30 days. These videos may help too: https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw ⭐22,162
 * [jonasschmedtmann/ultimate-react-course](https://github.com/jonasschmedtmann/ultimate-react-course):Starter files, final projects, and FAQ for my Ultimate React course ⭐1,089
@@ -93,15 +93,15 @@
 * [badges/shields](https://github.com/badges/shields):Concise, consistent, and legible badges in SVG and raster format ⭐20,633
 
 #### python
-* [geekan/MetaGPT](https://github.com/geekan/MetaGPT):🌟 The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo ⭐14,700
+* [geekan/MetaGPT](https://github.com/geekan/MetaGPT):🌟 The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo ⭐14,708
 * [QwenLM/Qwen-7B](https://github.com/QwenLM/Qwen-7B):The official repo of Qwen-7B (通义千问-7B) chat & pretrained large language model proposed by Alibaba Cloud. ⭐2,568
 * [public-apis/public-apis](https://github.com/public-apis/public-apis):A collective list of free APIs ⭐251,211
 * [kuafuai/DevOpsGPT](https://github.com/kuafuai/DevOpsGPT):Multi agent system for AI-driven software development. Convert natural language requirements into working software. Supports any development language and extends the existing base code. ⭐908
 * [home-assistant/core](https://github.com/home-assistant/core):🏡 Open source home automation that puts local control and privacy first. ⭐62,151
 * [tinygrad/tinygrad](https://github.com/tinygrad/tinygrad):You like pytorch? You like micrograd? You love tinygrad! ❤️ ⭐18,705
-* [xorbitsai/inference](https://github.com/xorbitsai/inference):Replace OpenAI GPT with another LLM in your app by changing a single line of code. Xinference gives you the freedom to use any LLM you need. With Xinference, you're empowered to run inference with any open-source language models, speech recognition models, and multimodal models, whether in the cloud, on-premises, or even on your laptop. ⭐627
-* [s0md3v/roop](https://github.com/s0md3v/roop):one-click deepfake (face swap) ⭐18,324
-* [swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings):A list of useful payloads and bypass for Web Application Security and Pentest/CTF ⭐49,695
+* [xorbitsai/inference](https://github.com/xorbitsai/inference):Replace OpenAI GPT with another LLM in your app by changing a single line of code. Xinference gives you the freedom to use any LLM you need. With Xinference, you're empowered to run inference with any open-source language models, speech recognition models, and multimodal models, whether in the cloud, on-premises, or even on your laptop. ⭐628
+* [s0md3v/roop](https://github.com/s0md3v/roop):one-click deepfake (face swap) ⭐18,325
+* [swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings):A list of useful payloads and bypass for Web Application Security and Pentest/CTF ⭐49,696
 * [Mikubill/sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet):WebUI extension for ControlNet ⭐11,849
 * [MeetKai/functionary](https://github.com/MeetKai/functionary):Chat language model that can interpret and execute functions/plugins ⭐19
 * [OpenBMB/ToolBench](https://github.com/OpenBMB/ToolBench):An open platform for training, serving, and evaluating large language model for tool learning. ⭐1,759
