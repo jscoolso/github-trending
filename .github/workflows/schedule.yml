@@ -35,8 +35,7 @@ jobs:
         echo start push
         git config --global user.name "jscoolso"
         git config --global user.email "sj510915831@163.com"
-
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/jscoolso/github-trending.git
+        git remote set-url origin https://x-access-token:${{ secrets.githubTreningToken }}@github.com/jscoolso/github-trending.git
 
         git add -A
         git commit -m $(date '+%Y-%m-%d')
