@@ -27,7 +27,7 @@ jobs:
 
     - name: Run Scraper
       run: |
-        pnpm run serve
+        npm run serve
         # esno scripts/scraper.ts
 
     - name: push to origin master
