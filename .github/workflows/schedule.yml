@@ -32,12 +32,16 @@ jobs:
         # esno scripts/scraper.ts
 
     - name: push to origin master
+      # 使用secrets.MY_TRENDING_TOKEN
+      # https://docs.github.com/en/actions/reference/encrypted-secrets#using-encrypted-secrets-in-a-workflow
+      env:
+        TRENDING_TOKEN: ${{ secrets.MY_TRENDING_TOKEN }}
       run: |
         echo start push
         git config --global user.name "jscoolso"
         git config --global user.email "sj510915831@163.com"
 
-        git remote set-url origin https://x-access-token:${{ secrets.MY_TRENDING_TOKEN }}@github.com/jscoolso/github-trending.git
+        git remote set-url origin https://x-access-token:${{ TRENDING_TOKEN }}@github.com/jscoolso/github-trending.git
         
         git add -A
         git commit -m $(date '+%Y-%m-%d')
