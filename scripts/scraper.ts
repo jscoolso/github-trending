@@ -1,67 +1,127 @@
-/*
- * @Author: shaojun
- * @Date: 2023-08-08 10:44:56
- * @LastEditTime: 2023-08-08 10:59:05
- * @LastEditors: shaojun
- * @Description: 
- */
-import axios from 'axios';
-import * as fs from 'fs'; 
-import * as child_process from 'child_process';
-import * as cheerio from 'cheerio';
-import dayjs from 'dayjs';
+import axios, { toFormData } from "axios";
+import cheerio from "cheerio";
+import fs from "fs";
+import path from "path";
+import { exec } from "child_process";
 
-async function gitAddCommitPush(date: string, filename: string) {
-    const cmdGitAdd = `git add ${filename}`;
-    const cmdGitCommit = `git commit -m "${date}"`;
-    const cmdGitPush = 'git push -u origin master';
+const readmeSource = fs.readFileSync("README-source.md", "utf-8");
+const year = new Date().getFullYear().toString();
+const folderPath = path.join(__dirname, year);
 
-    child_process.execSync(cmdGitAdd);
-    child_process.execSync(cmdGitCommit);
-    child_process.execSync(cmdGitPush);
+let todayContent = "";
+
+if (!fs.existsSync(folderPath)) {
+  fs.mkdirSync(folderPath);
+  console.log(`${year}文件夹创建成功`);
+} else {
+  console.log(`${year}文件夹已存在`);
 }
 
-function createMarkdown(date: string, filename: string) {
-    fs.writeFileSync(filename, `## ${date}\n`);
-}
+const HEADERS = {
+  "User-Agent":
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:11.0) Gecko/20100101 Firefox/11.0",
+  Accept:
+    "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+  "Accept-Encoding": "gzip,deflate,sdch",
+  "Accept-Language": "zh-CN,zh;q=0.8",
+};
 
-async function scrape(language: string, filename: string) {
-    const HEADERS = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:11.0) Gecko/20100101 Firefox/11.0',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Accept-Encoding': 'gzip,deflate,sdch',
-        'Accept-Language': 'zh-CN,zh;q=0.8'
-    };
+const gitAddCommitPush = (date: string, filename: string) => {
+  const cmdGitAdd = `git add ${path.join(folderPath, filename)}`;
+  const cmdGitCommit = `git commit -m "${date}"`;
+  const cmdGitPush = "git push -u origin master";
 
-    const url = `https://github.com/trending/${language}`;
-    const response = await axios.get(url, { headers: HEADERS });
-    const $ = cheerio.load(response.data);
-    const items = $('div.Box article.Box-row');
+  exec(cmdGitAdd);
+  exec(cmdGitCommit);
+  exec(cmdGitPush);
+};
 
-    fs.appendFileSync(filename, `\n#### ${language}\n`, 'utf8');
+const getLastWeekDates = () => {
+  const dates = [];
+  for (let i = 0; i < 7; i++) {
+    const date = new Date();
+    date.setDate(date.getDate() - i);
+    const formattedDate = date
+      .toLocaleDateString("zh-CN", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      })
+      .replace(/\//g, "-");
+    dates.push([formattedDate.split("-")[0], formattedDate]);
+  }
+  return dates;
+};
 
-    items.each((index, element) => {
-        const title = $(element).find(".lh-condensed a").text();
-        const owner = $(element).find(".lh-condensed span.text-normal").text();
-        const description = $(element).find("p.col-9").text();
-        let url = $(element).find(".lh-condensed a").attr("href");
-        url = "https://github.com" + url;
-        fs.appendFileSync(filename, `* [${title}](${url}):${description}\n`, 'utf8');
-    });
-}
+const createMarkdown = (date: string, filename: string) => {
+  console.log(`createMarkdown ${date}: ${filename}`);
+  fs.writeFileSync(path.join(folderPath, filename), `## ${date}\n`);
+};
+const createREADME = (date: string) => {
+  let lastWeekDates = getLastWeekDates();
+  let lastWeekDatesStr = `## Last 7 Days\n`;
+  for (let i = 0; i < lastWeekDates.length; i++) {
+    lastWeekDatesStr += `- [${lastWeekDates[i][1]}](./${lastWeekDates[i][0]}/${lastWeekDates[i][1]}.md)\n`;
+  }
 
-async function job() {
-    const strdate = dayjs().format('YYYY-MM-DD');
-    const filename = `${strdate}.md`;
+  todayContent = `${lastWeekDatesStr}\n## ${date}\n${todayContent}`;
+  fs.writeFileSync(
+    path.join(__dirname, "README.md"),
+    readmeSource.replace("{{today}}", todayContent)
+  );
+  console.log("createREADME");
+};
 
-    createMarkdown(strdate, filename);
+const scrape = async (language: string, filename: string) => {
+  const isTrending = language === "";
+  const url = `https://github.com/trending${isTrending ? "" : "/" + language}`;
+  const response = await axios.get(url, { headers: HEADERS });
+  const $ = cheerio.load(response.data);
+  const items = $("div.Box article.Box-row");
 
-    await scrape('python', filename);
-    await scrape('swift', filename);
-    await scrape('javascript', filename);
-    await scrape('go', filename);
+  const menu = isTrending ? "trending" : language;
+  let result = `\n#### ${menu}\n`;
 
-    gitAddCommitPush(strdate, filename);
-}
+  items.each((index, element) => {
+    const title = $(element).find(".lh-condensed a").text().replace(/\s/g, "");
+    const owner = $(element).find(".lh-condensed span.text-normal").text();
+    const description = $(element).find("p.col-9").text();
+    let url = $(element).find(".lh-condensed a").attr("href");
+    url = "https://github.com" + url;
+    let stars = $(element).find(".f6 a[href$=stargazers]").text().trim();
+    result += `* [${title.trim()}](${url.trim()}):${description.trim()} ⭐${stars}\n`;
+  });
+  fs.appendFileSync(path.join(folderPath, filename), result);
+  todayContent += result;
+  console.log(`finished: ${menu}`);
+  //   try {
+
+  //   } catch (error) {
+  //     console.log(`error: ${menu}`);
+  //   }
+};
+
+const job = async () => {
+  const strdate = new Date()
+    .toLocaleDateString("zh-CN", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    })
+    .replace(/\//g, "-");
+  const filename = `${strdate}.md`;
+
+  createMarkdown(strdate, filename);
+
+  await scrape("", filename);
+  await scrape("typescript", filename);
+  await scrape("javascript", filename);
+  await scrape("python", filename);
+  await scrape("Android", filename);
+  await scrape("Flutter", filename);
+
+  createREADME(strdate);
+  // gitAddCommitPush(strdate, filename);
+};
 
 job();
