@@ -93,7 +93,7 @@ const scrape = async (language: string, filename: string) => {
     let url = $(element).find(".lh-condensed a").attr("href");
     url = "https://github.com" + url;
     let stars = $(element).find(".f6 a[href$=stargazers]").text().trim();
-    result += `* [${title.trim()}](${url.trim()}):${description.trim()}<${owner}> ⭐${stars}\n`;
+    result += `* [${title.trim()}](${url.trim()}):${description.trim()} 🧑‍💻${owner.trim()} ⭐${stars}\n`;
   });
   fs.appendFileSync(path.join(folderPath, filename), result);
   todayContent += result;
