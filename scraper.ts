@@ -121,6 +121,7 @@ const job = async () => {
   await scrape("vue", filename);
   await scrape("typescript", filename);
   await scrape("javascript", filename);
+  await scrape("dart", filename);
   await scrape("python", filename);
 
   createREADME(strdate);
